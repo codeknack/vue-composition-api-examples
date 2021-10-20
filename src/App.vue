@@ -1,16 +1,23 @@
 <template>
   <div id="app">
-    <user-list />
+    <universal-list url="https://jsonplaceholder.typicode.com/todos" v-slot="{ data }">
+      <div v-for="item in data" :key="item.id">
+        <ul>
+          <li> {{ item.title }}</li>
+          <li> {{ item.completed}}</li>
+        </ul>
+      </div>
+    </universal-list>
   </div>
 </template>
 
 <script>
-import UserList from "./components/UserList";
+import UniversalList from "./components/UniversalList";
 
 export default {
   name: "App",
   components: {
-    UserList
+    UniversalList
   }
 };
 </script>
