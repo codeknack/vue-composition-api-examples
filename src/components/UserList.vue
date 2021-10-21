@@ -3,12 +3,11 @@
     <h2>Erorr: {{ error }}</h2>
   </div>
   <div v-if="loading"><h2>Fetching Data!</h2></div>
-  <div v-for="item in data" :key="item.id">
-    <ul>
-      <li><b>Name:</b> {{ item.name }} </li>
-      <li><b>Username:</b> {{ item.username}} </li>
-    </ul>
-  </div>
+  <h2>Users</h2>
+  <ul v-for="item in data" :key="item.id">
+    <li><b>Name:</b> {{ item.name }} </li>
+    <li><b>Username:</b> {{ item.username}} </li>
+  </ul>
 </template>
 
 <script>
