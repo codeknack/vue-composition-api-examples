@@ -1,24 +1,15 @@
-# composition-api
+# Vue Composition API Examples
 
-## Project setup
-```
-npm install
-```
+Examples of using Vue Composition API to accompany a tutorial on SitePoint.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Requirements
 
-### Compiles and minifies for production
-```
-npm run build
-```
+* [Node.js](http://nodejs.org/)
+* [Vue CLI](https://cli.vuejs.org/)
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Installation Steps
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Clone repo
+2. Run `npm install`
+3. Select a branch *(composables-basic* or *composables-advanced*)
+4. Run `npm run serve`
