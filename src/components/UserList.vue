@@ -5,8 +5,8 @@
   <div v-if="loading"><h2>Fetching Data!</h2></div>
   <div v-for="item in data" :key="item.id">
     <ul>
-      <li> {{ item.name }}</li>
-      <li> {{ item.username}}</li>
+      <li><b>Name:</b> {{ item.name }} </li>
+      <li><b>Username:</b> {{ item.username}} </li>
     </ul>
   </div>
 </template>
@@ -29,3 +29,9 @@ export default {
   }
 };
 </script> 
+
+<style scoped>
+  ul {
+    list-style-type: none;
+  }
+</style>
