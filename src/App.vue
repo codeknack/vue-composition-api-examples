@@ -1,12 +1,10 @@
 <template>
   <div id="app">
     <universal-list url="https://jsonplaceholder.typicode.com/todos" v-slot="{ data }">
-      <div v-for="item in data" :key="item.id">
-        <ul>
-          <li> {{ item.title }}</li>
-          <li> {{ item.completed}}</li>
-        </ul>
-      </div>
+      <h2>Todos</h2>
+      <ol>
+        <li v-for="item in data" :key="item.id"> {{ item.title }} - {{ item.completed }} </li>
+      </ol>
     </universal-list>
   </div>
 </template>
