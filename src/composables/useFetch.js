@@ -1,23 +1,25 @@
-import {toRefs, reactive} from 'vue';
+import {toRefs, ref, reactive} from 'vue';
 
 export function useFetch(url, options) {
+  const data = ref(null);
   const state = reactive({
-    data: null,
     error: null,
     loading: false
   });
+
   const fetchData = async () => {
     state.loading = true;
     try {
       const res = await fetch(url, options);
-      state.data = await res.json();
-    } catch (errors) {
-      state.error = errors;
+      data.value = await res.json();
+    } catch (e) {
+      state.error = e;
     } finally {
       state.loading = false;
     }
   };
+
   fetchData();
   
-  return {...toRefs(state)};
+  return {data, ...toRefs(state)};
 }
