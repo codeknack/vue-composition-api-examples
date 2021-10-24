@@ -1,8 +1,8 @@
 <template>
   <div v-if="error">
-    <h2>Erorr: {{ error }}</h2>
+    <h2>Error: {{ error }}</h2>
   </div>
-  <div v-if="loading"><h2>Fetching Data!</h2></div>
+  <div v-if="loading"><h2>Loading data...</h2></div>
   <slot :data="data"></slot>
 </template>
 
