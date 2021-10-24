@@ -1,8 +1,8 @@
 <template>
   <div v-if="error">
-    <h2>Erorr: {{ error }}</h2>
+    <h2>Error: {{ error }}</h2>
   </div>
-  <div v-if="loading"><h2>Fetching Data!</h2></div>
+  <div v-if="loading"><h2>Loading data...</h2></div>
   <h2>Users</h2>
   <ul v-for="item in data" :key="item.id">
     <li><b>Name:</b> {{ item.name }} </li>
